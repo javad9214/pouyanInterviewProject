@@ -11,7 +11,7 @@ class PostViewModel(private val repository: PostRepository): ViewModel() {
     val allPosts: LiveData<List<Post>> = repository.allPosts
 
 
-    fun insertPost(posts: List<Post>) {
+    fun insertAllPosts(posts: List<Post>) {
         viewModelScope.launch {
             repository.insertPost(posts)
         }

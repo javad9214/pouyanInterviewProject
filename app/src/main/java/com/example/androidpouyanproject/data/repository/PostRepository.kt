@@ -10,4 +10,5 @@ class PostRepository(private val postDao: PostDao) {
     suspend fun insertPost(posts: List<Post>){
         postDao.insertAll(posts)
     }
+
 }
